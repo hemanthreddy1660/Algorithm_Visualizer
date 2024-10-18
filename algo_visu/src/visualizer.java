@@ -10,9 +10,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.util.Arrays;
-import java.util.*;
 
 
 public class visualizer extends Application {
@@ -21,7 +19,7 @@ public class visualizer extends Application {
     private insertionSort insertionsort;
     private Canvas canvas;
     private Timeline timeline;
-    private int[] initialarray = {
+    private final int[] initialarray = {
         35, 89, 47, 65, 28, 92, 54, 12, 76, 40, 
         83, 21, 9, 56, 78, 65, 43, 92, 30, 19, 
         71, 84, 67, 58, 72, 43, 90, 24, 53, 81, 
@@ -51,7 +49,6 @@ public class visualizer extends Application {
 
         VBox layout = new VBox(10);
         layout.getChildren().addAll(SelectionSortbut,BubbleSortbut,InsertionSortBut);
-
         Scene initialscene = new Scene(layout,400,300);
         primaryStage.setTitle("Algorithm Visualiser Home");
         primaryStage.setScene(initialscene);
